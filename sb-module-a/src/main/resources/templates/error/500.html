@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>统一异常处理</title>
+</head>
+<body>
+    <h2>动态500错误页面，优先级更高</h2>
+    <div th:text="${status}"></div>
+    <div th:text="${error}"></div>
+    <div th:text="${message}"></div>
+</body>
+</html>
