@@ -22,7 +22,7 @@ public class SwaggerController {
     @PostConstruct
     public void init() {
         User user = new User();
-        user.setId(1);
+        user.setId(1L);
         user.setName("william");
         user.setAge(28);
         userInfos.put(user.getId(), user);

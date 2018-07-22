@@ -29,16 +29,21 @@ public class Swagger2 {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(enableSwagger)//开关
-                .groupName("")//分组
+                //开关
+                .enable(enableSwagger)
+                //分组
+                .groupName("")
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage(basePackage))//扫描指定包下面的注解
+                //扫描指定包下面的注解
+                .apis(RequestHandlerSelectors.basePackage(basePackage))
                 .paths(PathSelectors.any())
                 .build();
     }
 
-    // 创建api的基本信息
+    /**
+     * 创建api的基本信息
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("集成Swagger2构建RESTful APIs")
