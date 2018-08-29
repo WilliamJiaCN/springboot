@@ -17,6 +17,6 @@ public class SenderImpl implements Sender {
 
     @Override
     public void send() {
-        amqpTemplate.convertAndSend("test", "test rabbitmq message！");
+        amqpTemplate.convertAndSend("test", "test rabbitmq message!!!!!!!!!");
     }
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.architect.dao.UserDao">
+
+	<resultMap id="UserResultMap" type="com.architect.entity.User">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="address" property="address"/>
+        <result column="phone" property="phone"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id,name,age,address,phone
+	</sql>
+	
+	<select id="getByPrimaryKey" parameterType="com.architect.entity.User" resultMap="UserResultMap">
+      select
+      <include refid="columns" />
+      from t_user
+      where
+	        id = #{id} 
+    </select>
+
+	<insert id="insert" parameterType="com.architect.entity.User">
+        insert into t_user (
+        	id ,
+        	name ,
+        	age ,
+        	address ,
+        	phone 
+        ) values (
+        	#{id} ,
+        	#{name} ,
+        	#{age} ,
+        	#{address} ,
+        	#{phone} 
+        )
+	</insert>
+
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into t_user (
+        	id ,
+        	name ,
+        	age ,
+        	address ,
+        	phone 
+		) values
+		<foreach collection="list" item="p" index="index" separator=",">
+			(
+				#{p.id} ,
+				#{p.name} ,
+				#{p.age} ,
+				#{p.address} ,
+				#{p.phone} 
+			)
+		</foreach>
+
+	</insert>
+	<insert id="insertSelective" parameterType="com.architect.entity.User">
+        insert into t_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+          <if test="id != null">
+        	  id,
+          </if>
+          <if test="name != null">
+        	  name,
+          </if>
+          <if test="age != null">
+        	  age,
+          </if>
+          <if test="address != null">
+        	  address,
+          </if>
+          <if test="phone != null">
+        	  phone,
+          </if>
+        </trim>
+         values 
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+          <if test="id != null">
+        	  #{id},
+          </if>
+          <if test="name != null">
+        	  #{name},
+          </if>
+          <if test="age != null">
+        	  #{age},
+          </if>
+          <if test="address != null">
+        	  #{address},
+          </if>
+          <if test="phone != null">
+        	  #{phone},
+          </if>
+        </trim>
+	</insert>
+</mapper>
+
