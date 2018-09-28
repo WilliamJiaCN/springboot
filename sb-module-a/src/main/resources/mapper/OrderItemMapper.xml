@@ -35,10 +35,24 @@
     
     <select id="selectAll" resultMap="baseResultMap">
         SELECT
-        i.*
+        i.*, o.status
         FROM
         t_order o, t_order_item i
         WHERE
         o.order_id = i.order_id
+    </select>
+    <select id="selectOne" resultMap="baseResultMap" parameterType="com.architect.entity.Order">
+        SELECT
+        i.*, o.status
+        FROM
+        t_order o
+        INNER JOIN
+        t_order_item i
+        ON
+        o.order_id = i.order_id
+        WHERE
+        o.order_id = #{orderId,jdbcType=INTEGER}
+        AND
+        o.user_id = #{userId,jdbcType=INTEGER}
     </select>
 </mapper>

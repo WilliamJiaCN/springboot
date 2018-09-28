@@ -1,6 +1,7 @@
 package com.architect.test;
 
 import com.architect.startup.SpringBootStart;
+import com.architect.utils.RedisClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,19 @@ public class RedisTest {
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+    @Autowired
+    private RedisClient redisClient;
 
     @Test
     public void testRedis() {
         ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
         valueOperations.set("name", "william");
         System.out.println(valueOperations.get("name"));
+    }
+
+    @Test
+    public void testRedisCluster() {
+        redisClient.set("k2", "2");
+        System.out.println(redisClient.get("k2"));
     }
 }

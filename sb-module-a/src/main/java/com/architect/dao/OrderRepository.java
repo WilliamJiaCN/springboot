@@ -20,7 +20,7 @@ package com.architect.dao;
 import com.architect.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
+//@Mapper
 public interface OrderRepository {
     
     void createIfNotExistsTable();
@@ -32,4 +32,6 @@ public interface OrderRepository {
     void delete(Long orderId);
     
     void dropTable();
+
+    Order getByOrderId(Order orderDO);
 }

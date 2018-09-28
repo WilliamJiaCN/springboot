@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.architect.dao.OrderRepository">
+    <resultMap id="baseResultMap" type="com.architect.entity.Order">
+        <result column="order_id" property="orderId" jdbcType="INTEGER" />
+        <result column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="columns">
+        order_id,user_id,status
+    </sql>
     <update id="createIfNotExistsTable">
         CREATE TABLE IF NOT EXISTS t_order (order_id BIGINT AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
     </update>
@@ -26,4 +34,10 @@
     <delete id="delete">
         DELETE FROM t_order WHERE order_id = #{orderId,jdbcType=INTEGER}
     </delete>
+    <select id="getByOrderId" parameterType="com.architect.entity.Order" resultMap="baseResultMap">
+        SELECT
+        <include refid="columns" />
+        FROM t_order WHERE order_id = #{orderId,jdbcType=INTEGER}
+        AND user_id = #{userId,jdbcType=INTEGER}
+    </select>
 </mapper>

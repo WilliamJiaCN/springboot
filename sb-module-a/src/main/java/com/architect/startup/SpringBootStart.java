@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @EnableTransactionManagement(proxyTargetClass = true)
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @ComponentScan(value = "com.architect")
-@MapperScan(value = "com.architect.dao")
+//@MapperScan(value = "com.architect.dao")
 public class SpringBootStart {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(SpringBootStart.class);

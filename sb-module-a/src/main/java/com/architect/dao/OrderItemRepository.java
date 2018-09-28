@@ -17,12 +17,13 @@
 
 package com.architect.dao;
 
+import com.architect.entity.Order;
 import com.architect.entity.OrderItem;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 public interface OrderItemRepository {
     
     void createIfNotExistsTable();
@@ -36,4 +37,6 @@ public interface OrderItemRepository {
     List<OrderItem> selectAll();
     
     void dropTable();
+
+    OrderItem selectOne(Order orderDO);
 }
