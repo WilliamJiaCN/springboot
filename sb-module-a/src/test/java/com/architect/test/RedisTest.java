@@ -1,7 +1,7 @@
 package com.architect.test;
 
 import com.architect.startup.SpringBootStart;
-import com.architect.utils.RedisClient;
+import com.architect.util.RedisClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

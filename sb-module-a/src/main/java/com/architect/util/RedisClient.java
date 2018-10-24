@@ -1,4 +1,4 @@
-package com.architect.utils;
+package com.architect.util;
 
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;

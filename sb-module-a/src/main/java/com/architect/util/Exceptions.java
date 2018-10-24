@@ -1,4 +1,4 @@
-package com.architect.utils;
+package com.architect.util;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;

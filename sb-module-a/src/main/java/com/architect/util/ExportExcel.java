@@ -1,4 +1,4 @@
-package com.architect.utils;
+package com.architect.util;
 
 import com.architect.annotation.ExcelField;
 import com.google.common.collect.Lists;

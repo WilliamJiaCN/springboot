@@ -1,7 +1,7 @@
 package com.architect.test;
 
-import com.architect.utils.Crc16Sharding;
-import com.architect.utils.RedisClusterClient;
+import com.architect.util.Crc16Sharding;
+import com.architect.util.RedisClusterClient;
 import org.assertj.core.util.Lists;
 
 import java.io.IOException;

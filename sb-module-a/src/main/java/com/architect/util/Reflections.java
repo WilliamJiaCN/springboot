@@ -1,4 +1,4 @@
-package com.architect.utils;
+package com.architect.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;

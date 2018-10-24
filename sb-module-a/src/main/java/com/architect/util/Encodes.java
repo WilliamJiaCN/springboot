@@ -1,4 +1,4 @@
-package com.architect.utils;
+package com.architect.util;
 
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;

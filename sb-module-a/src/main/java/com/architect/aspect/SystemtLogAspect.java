@@ -1,6 +1,6 @@
 package com.architect.aspect;
 
-import com.architect.utils.AnnotationParseUtil;
+import com.architect.util.AnnotationParseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
