@@ -1,11 +1,12 @@
 package com.architect.startup;
 
-import org.mybatis.spring.annotation.MapperScan;
+import com.architect.config.DefaultThreadPoolConfig;
+import com.architect.config.Task1ThreadPoolConfig;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -17,6 +18,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @ComponentScan(value = "com.architect")
 //@MapperScan(value = "com.architect.dao")
+@EnableAsync
+@EnableConfigurationProperties(
+        {
+                Task1ThreadPoolConfig.class,
+                DefaultThreadPoolConfig.class
+        }
+)
 public class SpringBootStart {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(SpringBootStart.class);
