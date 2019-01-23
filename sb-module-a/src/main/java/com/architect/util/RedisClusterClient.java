@@ -1,6 +1,6 @@
 package com.architect.util;
 
-import com.architect.RedisCommandEnum;
+import com.architect.enums.RedisCommandEnum;
 
 import java.io.IOException;
 import java.net.Socket;

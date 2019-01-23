@@ -39,7 +39,7 @@
 //    @ResponseBody
 //    public ResponseEntity<Map<String, Object>> error(HttpServletRequest request) {
 //        Map<String, Object> body = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.TEXT_HTML));
-//        HttpStatus status = getStatus(request);
-//        return new ResponseEntity<>(body, status);
+//        HttpStatus Status = getStatus(request);
+//        return new ResponseEntity<>(body, Status);
 //    }
 //}

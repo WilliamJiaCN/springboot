@@ -1,4 +1,4 @@
-package com.architect;
+package com.architect.enums;
 
 /**
  * @author wenxiong.jia

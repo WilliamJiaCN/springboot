@@ -51,6 +51,6 @@ public final class Order {
     
     @Override
     public String toString() {
-        return String.format("order_id: %s, user_id: %s, status: %s", orderId, userId, status);
+        return String.format("order_id: %s, user_id: %s, Status: %s", orderId, userId, status);
     }
 }

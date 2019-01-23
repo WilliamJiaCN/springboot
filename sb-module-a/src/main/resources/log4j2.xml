@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" packages="com.weidian.open.log.tps">
 	<Properties>
-		<Property name="base.dir">data/logs/tms-finance-server</Property>
+		<Property name="base.dir">logs/sb-module-a</Property>
 		<Property name="pattern" value="">requestTime:%d|traceID:$${ctx:traceID}|SERVER_IP:$${ctx:SERVER_IP}|PROJECT_NAME:$${ctx:PROJECT_NAME}|USER_IP:$${ctx:USER_IP}|%m%n</Property>
 	</Properties>
 	<Appenders>
