@@ -82,11 +82,11 @@
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <!--自定义starter依赖-->
-        <!--<dependency>-->
-            <!--<groupId>com.architect</groupId>-->
-            <!--<artifactId>sb-module-b</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.architect</groupId>
+            <artifactId>sb-module-b</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -162,6 +162,11 @@
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
             <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>1.5.18.RELEASE</version>
         </dependency>
     </dependencies>
     <profiles>
