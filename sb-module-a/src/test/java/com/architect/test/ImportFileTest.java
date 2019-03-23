@@ -25,8 +25,8 @@ public class ImportFileTest {
     @Test
     public void testImportFile() {
         try {
-            FileInputStream fileInputStream = new FileInputStream("C:/Users/15353/Desktop/用户数据导入模板.xlsx");
-            MockMultipartFile mfile = new MockMultipartFile("C:/Users/15353/Desktop",
+            FileInputStream fileInputStream = new FileInputStream("C:/Users/15353/Downloads/用户数据导入模板.xlsx");
+            MockMultipartFile mfile = new MockMultipartFile("C:/Users/15353/Downloads",
                     "用户数据导入模板.xlsx", "", fileInputStream);
             excelController.importUserData(mfile);
         } catch (IOException e) {

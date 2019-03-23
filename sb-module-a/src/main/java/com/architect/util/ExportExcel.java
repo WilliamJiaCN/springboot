@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
@@ -388,6 +389,9 @@ public class ExportExcel {
         response.setContentType("application/octet-stream; charset=utf-8");
         response.setHeader("Content-Disposition", "attachment; filename=" + Encodes.urlEncode(fileName));
         write(response.getOutputStream());
+//        String filePath = "C:/Users/15353/Downloads/up/";
+//        OutputStream out = new FileOutputStream(filePath + fileName);
+//        write(out);
         return this;
     }
 

@@ -92,22 +92,22 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--热加载插件-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-devtools</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>io.shardingjdbc</groupId>-->
-            <!--<artifactId>sharding-jdbc-core</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>io.shardingsphere</groupId>-->
-            <!--<artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>io.shardingsphere</groupId>-->
-            <!--<artifactId>sharding-jdbc-transaction</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.shardingjdbc</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-transaction</artifactId>
+        </dependency>
         <!-- 支持发送邮件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -162,6 +162,11 @@
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
             <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ziroom.jz</groupId>
+            <artifactId>monitor-client</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
     <profiles>
